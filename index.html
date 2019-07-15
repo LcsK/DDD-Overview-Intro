@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Somos Todos Designers</h1>
+					<h4>(ou o porquê deveriamos ser)</h2>
+				</section>
+				<section>
+					<h1>Design</h1>
+					<spam>do latim <em>"designare"</em>: designar, desenhar.</spam>
+					<blockquote class="fragment" data-fragment-index="0">Transformar problemas em soluções</blockquote>
+				</section>
+				<section>
+					<h1>DDD</h1>
+					<h2>Domain Driven Design</h2>
+					<p class="fragment" data-fragment-index="0">Por quê?</p>
+					<p class="fragment" data-fragment-index="1">Como?</p>
+					<p class="fragment" data-fragment-index="2">O quê?</p>
+				</section>
+				<section>
+					<h1>Domínio</h1>
+					<p class="fragment" data-fragment-index="0">É um assunto para qual o software está sendo usado</p>
+					<p class="fragment" data-fragment-index="1">É uma atividade executada pelo usuário dentro do software</p>
+				</section>
+				<section>
+					<h1>Domínio</h1>
+					<p>Deve ser independente de serviços externos, técnologias, frameworks, etc.</p>
+				</section>
+				<section>
+					<h1>Sub-Domínio</h1>
+					<p>Um domínio pode ser granulado em sub-domínios</p>
+				</section>
+				<section>
+						<h1>Domínio Principal (core-domain)</h1>
+						<p>É a principal parte do domínio</p>
+				</section>
+				<section>
+					<h1>Especialistas de Domínio</h1>
+					<p class="fragment" data-fragment-index="0">Não é um cargo, é uma role</p>
+				</section>
+				<section>
+					<h1>Modelo</h1>
+					<blockquote>É uma simplificação. É uma interpretação da realidade que abstrai os aspectos relevantes para resolver o problema em questão e ignorar detalhes alheios a isto.</blockquote>
+				</section>
+				<section>
+					<h2>Modelo</h2>
+					<p class="fragment" data-fragment-index="0">É evolutivo</p>
+					<p class="fragment" data-fragment-index="1">Serve como algo comum e palpável a todos os membros do time</p>
+					<p class="fragment" data-fragment-index="2">Garante que aquilo que está sendo especificado é o que está sendo implementado</p>
+					<p class="fragment" data-fragment-index="3">É o conhecimento destilado</p>
+				</section>
+				<section>
+					<h2>A implementação DEVE refletir 100% o modelo</h2>
+				</section>
+				<section>
+					<h1>Exemplos de Modelos</h1>
+					<p class="fragment" data-fragment-index="0">Banco imobiliário é um modelo que abstrai o domínio do mercado imobiliário</p>
+					<p class="fragment" data-fragment-index="1">Maquetes são modelos do domínio de arquiteturas de edificações</p>
+				</section>
+				<section>
+					<h1>Tipos de ferramentas:</h1>
+					<ul>
+						<li>Design Estratégico</li>
+						<li>Design Tático</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Design Estratégico</h1>
+					<p>Modelar uma <strong>linguagem ubíqua</strong> em um <strong>contexto delimitado</strong></p>
+				</section>
+				<section>
+					<h1>MDD - Model Driven Design</h1>
+					<p>Entidades, fábricas, repositórios, serviços, etc.</p>
+				</section>
+				<section>
+					<h1>Mapa de contextos</h1>
+					<ul>
+						<li class="fragment" data-fragment-index="0">Cliente-Fornecedor</li>
+						<li class="fragment" data-fragment-index="1">Núcleo Compartilhado</li>
+						<li class="fragment" data-fragment-index="2">Camada Anticorrupção</li>
+						<li class="fragment" data-fragment-index="3">Conformista</li>
+						<li class="fragment" data-fragment-index="4">Caminhos Separados</li>
+						<li class="fragment" data-fragment-index="5">Serviço Aberto de Funcionalidades e Linguagem Publicada</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Como começar?</h1>
+					<ul>
+						<li class="fragment" data-fragment-index="0">User Story Mapping</li>
+						<li class="fragment" data-fragment-index="1">Event Storming</li>
+						<li class="fragment" data-fragment-index="2">Nem tudo é cabível ao DDD</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Não existe design perfeito</h1>
+				</section>
+				<section>
+					<img src="static/nyan.gif" alt="Nyan Cat" height="320" width="320"> 
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
